@@ -82,17 +82,33 @@ ProbablyEngine.rotation.register_custom(250, "Blood[Shadow]", {
   }},
   { "Death Strike", "player.health < 100" },
   { "Death Strike", {
-  	  "player.rune(frost).count = 2",
-  	  "player.rune(unholy.count = 2"
+  	  "player.runes(frost).count = 2",
+  	  "player.runes(unholy.count = 2"
   }},
   { "Death Strike", "player.rune(death).count > 3" },
   { "Blood Tap", {
   	  "player.buff(blood charge).count >= 10",
-  	  "player.rune(death) = 0"
+  	  "player.runes(death).count = 0",
+  	  "player.runes(frost).count = 0",
+  	  "player.runes(unholy).count = 0"
+  }},
+  { "Blood Tap", {
+  	  "player.buff(blood charge).count >= 10",
+  	  "player.runes(death).count = 0",
+  	  "player.runes(frost).count = 1",
+  	  "player.runes(unholy).count = 0"
+  }},
+  { "Blood Tap", {
+  	  "player.buff(blood charge).count >= 10",
+  	  "player.runes(death).count = 0",
+  	  "player.runes(unholy).count = 1",
+  	  "player.runes(frost).count = 0"
   }},
   { "Blood Tap", {
   	  "player.buff(blood charge).count >= 5",
-  	  "player.rune(death) = 1"
+  	  "player.runes(death).count = 1",
+  	  "player.runes(frost).count = 0",
+  	  "player.runes(unholy).count = 0"
   }},
   { "Blood Boil", {
     "player.buff(Crimson Scourge)",
