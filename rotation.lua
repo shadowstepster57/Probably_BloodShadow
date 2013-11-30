@@ -83,7 +83,7 @@ ProbablyEngine.rotation.register_custom(250, "Blood[Shadow]", {
   { "Death Strike", "player.health < 100" },
   { "Death Strike", {
   	  "player.runes(frost).count = 2",
-  	  "player.runes(unholy.count = 2"
+  	  "player.runes(unholy).count = 2"
   }},
   { "Death Strike", "player.rune(death).count > 3" },
   { "Blood Tap", {
